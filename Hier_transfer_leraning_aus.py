@@ -21,7 +21,7 @@ from sklearn.preprocessing import LabelEncoder
 from sklearn.preprocessing import MinMaxScaler
 from pandas import Series
 from pandas import concat
-from pandas import datetime
+from datetime import datetime
 from sklearn.metrics import mean_squared_error
 from sklearn.preprocessing import MinMaxScaler
 from keras.models import Sequential
@@ -239,7 +239,7 @@ print('MAPE', (MAPE(rawdatay, pred_aus))[7,:].mean())
 
 
 #################################### """"" LEVEL TWO """"" ############
-'''
+
 daily_df=df.iloc[:,56:84]
 
 diff3=daily_df.diff()
@@ -332,7 +332,7 @@ rawdatay = rawdatay[12:, :]
 
 from keras.models import Model
 from keras.models import load_model
-model2=load_model('aus(1steps).h5')
+model2=load_model('aus(11).h5')
 
 for layer in model2.layers[:5]:
     layer.trainable = False
